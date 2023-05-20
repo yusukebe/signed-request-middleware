@@ -19,7 +19,7 @@ app.get('/', async (c, next) => {
     constructor(attributeName: string) {
       this.attributeName = attributeName
     }
-    async element(element: any) {
+    async element(element: Element) {
       const attribute = element.getAttribute(this.attributeName)
       if (attribute) {
         const url = new URL(attribute, c.req.url)
