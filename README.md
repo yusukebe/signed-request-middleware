@@ -34,6 +34,7 @@ app.get('/generate/*', async (c) => {
 ## Related projects
 
 * <https://developers.cloudflare.com/workers/examples/signing-requests/>
+* <https://developer.fastly.com/solutions/examples/time-limited-url-tokens>
 * <https://hono.dev>
 
 ## Author
