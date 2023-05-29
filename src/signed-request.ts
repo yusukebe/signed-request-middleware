@@ -18,7 +18,7 @@ export const verifySignedRequest = (options: { secretKey: string }): MiddlewareH
     const key = await crypto.subtle.importKey('raw', secretKeyData, { name: 'HMAC', hash: 'SHA-256' }, false, [
       'verify'
     ])
-    const expiryNumber = Number(expiry)
+    const expiryNumber = Number.parseInt(expiry, 10)
 
     const dataToAuthenticate = `${c.req.path}@${expiryNumber}`
     let receivedMac: Uint8Array
